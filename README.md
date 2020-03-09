@@ -19,7 +19,7 @@ You can install **alldebrid-php** in two ways, by using composer or downloading 
 ### Via Composer:
 
 **alldebrid-php** is available on Packagist as the
-[`alldebrid/alldebrid`](https://packagist.org/packages/alldebrid/alldebrid) package:
+[`alldebrid/alldebrid-php`](https://packagist.org/packages/alldebrid/alldebrid-php) package:
 
 ```
 composer require alldebrid/alldebrid
