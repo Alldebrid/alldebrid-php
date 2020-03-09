@@ -367,14 +367,9 @@ class Alldebrid {
 
 		if(count($result) == 1)
 			return $this->response($result[0]);
-			public $options = [
-				'autoInit' => false, // get user and host data on class instantiation
-				'autoUnlockBestStreamQuality' => false, // auto choose best stream quality if unlock send stream list to choose from
-				'ignoreRedirector' => true, // do not handle redirector
-				'retry' => false, // retry failed request to API
-				'maxRetries' => 2, // max 2 retries
-				'exceptions' => false // emit exceptions
-			];
+
+		return $this->response($result);
+	}
 
 	public function linkIsSupported($links) {
 		return $this->linkType($links, true);
