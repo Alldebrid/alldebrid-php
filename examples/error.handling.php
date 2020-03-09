@@ -22,7 +22,7 @@ $alldebrid = new \Alldebrid\Alldebrid($agent, $apikey);
 
 if($error) {
     $errorMessage = $infos;
-    die("Error " . $error . " : " . $errorMessage . "\n");
+    //die("Error " . $error . " : " . $errorMessage . "\n");
 }
 
 // Infos are OK if no error was returned
@@ -31,10 +31,10 @@ if($error) {
 
 // Alternatively, you can use an Exception mode if we prefer
 
-$alldebrid->options['exceptions'] = true;
+$alldebrid->setErrorMode('exception');
 
 try {
-    $infos = $alldebrid->hosts();
+    $infos = $alldebrid->error('LINK_HOST_NOT_SUPPORTED');
 } catch(Exception $e) {
     die("Exception " . $e->getMessage() . "\n");
 }

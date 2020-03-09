@@ -47,6 +47,13 @@ class Alldebrid {
 		$this->pinReset();
 	}
 
+	public function setErrorMode($mode) {
+		if($mode == 'error')
+			$this->options['exceptions'] = false;
+		else if($mode == 'exception')
+			$this->options['exceptions'] = true;
+	}
+
 	public function response($data, $error = null) {
 		if($error === null) {
 			if($this->options['exceptions'] === true) {
