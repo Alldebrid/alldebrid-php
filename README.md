@@ -42,7 +42,7 @@ include('./alldebrid.standalone.php');
 
 The Alldebrid API requires an agent and an apikey to authenticate requests. The agent is your app / library name ([doc](https://docs.alldebrid.com/v4/#authentication)).
 
-You can view , create and manage your API keys in your [Alldebrid Apikey dashboard][apikeys], or generate them remotly (with user action) though the PIN flow ([doc](https://docs.alldebrid.com/v4/#pin-auth) / [example](https://github.com/Alldebrid/alldebrid-php/blob/master/examples/pin.php)).
+You can view, create and manage your API keys in your [Alldebrid Apikey dashboard][apikeys], or generate them remotely (with user action) through the PIN flow ([doc](https://docs.alldebrid.com/v4/#pin-auth) / [example](https://github.com/Alldebrid/alldebrid-php/blob/master/examples/pin.php)).
 
 ```php
 $agent = 'myAppName'; // Your project name
@@ -95,9 +95,9 @@ echo "Hello, " . $user['username'] . "\n";
 
 ### High-level and low-level use
 
-This library provides multiple way to use the Alldebrid API, once the agent and apikey are set.
+This library provides multiple ways to use the Alldebrid API, once the agent and apikey are set.
 
-The lowest-level use is to call the api() function with the desired endpoint and params : 
+The lowest-level use is to call the api() function with the desired endpoint and parameters : 
 
 ```php
 $alldebrid = new \Alldebrid\Alldebrid($agent, $apikey);
@@ -113,7 +113,7 @@ $myLink = 'https://example.com/example';
 [ $response, $error ] = $alldebrid->linkInfos($myLink);
 ```
 
-Finally, for links, magnets and pin auth, helper objects are provided to easely interact with them : 
+Finally, for links, magnets and pin auth, helper objects are provided to easily interact with them : 
 
 ```php
 $alldebrid = new \Alldebrid\Alldebrid($agent, $apikey);
@@ -129,7 +129,7 @@ Every calls of this library are documented in the [example folder](https://githu
 
 ### Configuration
 
-Some options can tweak how this library behaves. The wrapper has an public options array property that you can update.
+Some options can tweak how this library behaves. The wrapper has a public option array property that you can update.
 
 ```php
 $alldebrid = new \Alldebrid\Alldebrid($agent, $apikey);
