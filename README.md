@@ -40,9 +40,9 @@ include('./alldebrid.standalone.php');
 
 ### Authentication
 
-The Alldebrid API requires an agent and an apikey to authenticate requests. The agent is your app / library / script name ( [doc][https://docs.alldebrid.com/v4/#authentication]).
+The Alldebrid API requires an agent and an apikey to authenticate requests. The agent is your app / library / script name ( [doc](https://docs.alldebrid.com/v4/#authentication)).
 
-You can view , create and manage your API keys in your [Alldebrid Apikey dashboard][apikeys], or generate them remotly (with user action) though the PIN flow ( [doc][https://docs.alldebrid.com/v4/#pin-auth] / [example][https://github.com/Alldebrid/alldebrid-php/blob/master/examples/pin.php] ).
+You can view , create and manage your API keys in your [Alldebrid Apikey dashboard][apikeys], or generate them remotly (with user action) though the PIN flow ( [doc](https://docs.alldebrid.com/v4/#pin-auth) / [example](https://github.com/Alldebrid/alldebrid-php/blob/master/examples/pin.php) ).
 
 ```php
 $agent = 'myAppName'; // Your project name
@@ -125,11 +125,11 @@ $link = $alldebrid->link($myLink);
 //  you can then call $link->unlock() if there is no error 
 ```
 
-Every calls of this library are documented in the [example folder][https://github.com/Alldebrid/alldebrid-php/tree/master/examples].
+Every calls of this library are documented in the [example folder](https://github.com/Alldebrid/alldebrid-php/tree/master/examples).
 
 ## Getting help
 
-If you need help installing or using the library, please check the [Api docs](apidocs) first, check the [example codes][https://github.com/Alldebrid/alldebrid-php/tree/master/examples] and then [contact us](https://alldebrid.com/contact/) if you don't find an answer to your question.
+If you need help installing or using the library, please check the [Api docs](apidocs) first, check the [example codes](https://github.com/Alldebrid/alldebrid-php/tree/master/examples) and then [contact us](https://alldebrid.com/contact/) if you don't find an answer to your question.
 
 If you've instead found a bug in the library or would like new features added, go ahead and open issues or pull requests against this repo!
 
