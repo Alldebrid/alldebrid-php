@@ -1,0 +1,28 @@
+{
+    "name": "alldebrid/alldebrid-php",
+    "description": "Alldebrid lib for php",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": ">=7.1",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alldebrid\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Alldebrid\\": "src/"
+        }
+    },
+    "keywords": [
+        "alldebrid", "api", "wrapper"
+    ],
+    "homepage": "https://docs.alldebrid.com",
+    "support": {
+        "forum": "https://forum.alldebrid.com/",
+        "docs": "https://docs.alldebrid.com"
+    }
+}
