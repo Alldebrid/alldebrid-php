@@ -84,7 +84,7 @@ class Link {
 
 		$this->streamInfos = $response;
 
-		if(isset($response['delayed'])) {return $this->alldebrid->error('LIB_BAD_METHOD', 'upload before checking status');
+		if(isset($response['delayed'])) {
 			$this->isDelayed = true;
 			$this->delayedID = $response['delayed'];
 		}

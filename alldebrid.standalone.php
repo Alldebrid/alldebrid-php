@@ -198,7 +198,7 @@ class Alldebrid {
 	}
 
 	public function hostsPriority() {
-		return $this->response($this->api('hosts/priority'));
+		return $this->responseFlatten($this->api('hosts/priority'));
 	}
 
 	public function user() {
@@ -240,7 +240,7 @@ class Alldebrid {
 
 		if($error) return $this->response($response, $error);
 
-		return $this->responseFlatten($response['links']);
+		return $this->response($response['links']);
 	}
 
 	public function userHistoryDelete() {
@@ -313,7 +313,15 @@ class Alldebrid {
 		if(!is_array($magnets))
 			$magnets = [ $magnets ];
 
-		return $this->responseFlatten($this->api('magnet/instant', ['magnets' => $magnets]));
+		[ $response, $error ] = $this->api('magnet/instant', ['magnets' => $magnets]);
+
+		if($error) return $this->response($response, $error);
+
+		if(count($response['magnets']) == 1) {
+			return $this->response($response['magnets'][0]);
+		}
+
+		return $this->response($response['magnets']);
 	}
 
 
