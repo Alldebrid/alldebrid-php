@@ -24,5 +24,9 @@
     "support": {
         "forum": "https://forum.alldebrid.com/",
         "docs": "https://docs.alldebrid.com"
+    },
+    "require-dev": {
+        "atoum/atoum": "^3.4",
+        "atoum/reports-extension": "^3.0"
     }
 }
