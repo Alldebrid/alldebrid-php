@@ -26,7 +26,7 @@ class Alldebrid extends atoum {
         usleep(250000);
 
         $alldebrid = new \Alldebrid\Alldebrid('atoumTesting');
-        $alldebrid->setApikey('aplN8W0cZro1B54JrLs5');
+        $alldebrid->setApikey('PUT-A-VALID-APIKEY-HERE');
 
         $response = $alldebrid->user();
 
@@ -44,7 +44,7 @@ class Alldebrid extends atoum {
     public function testHosts () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         $response = $alldebrid->hosts();
 
         $this->array($response)
@@ -61,7 +61,7 @@ class Alldebrid extends atoum {
     public function testHostsPriority () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         $response = $alldebrid->hostsPriority();
             
         $this->array($response)
@@ -78,7 +78,7 @@ class Alldebrid extends atoum {
     public function testUser () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         $response = $alldebrid->user();
 
         $this->array($response)
@@ -95,7 +95,7 @@ class Alldebrid extends atoum {
     public function testLinkType () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         $response = $alldebrid->linkType('https://example.com/testing');
 
         $this->array($response)
@@ -109,7 +109,7 @@ class Alldebrid extends atoum {
     public function testLinkIsSupported () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         $response =  $alldebrid->linkIsSupported('https://example.com/testing');
 
         $this->array($response)
@@ -123,7 +123,7 @@ class Alldebrid extends atoum {
     public function testLinkInfos () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         $response = $alldebrid->linkInfos('https://example.com/testing');
 
         $this->array($response)
@@ -140,7 +140,7 @@ class Alldebrid extends atoum {
     public function testLinkUnlock () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         $response = $alldebrid->linkUnlock('https://example.com/testing');
 
         $this->array($response)
@@ -157,7 +157,7 @@ class Alldebrid extends atoum {
     public function testLinkStream () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         [ $unlock, $error ] = $alldebrid->linkUnlock('https://example.com/streaming');
 
         $response = $alldebrid->linkStream($unlock['id'], $unlock['streams'][0]['id']);
@@ -176,7 +176,7 @@ class Alldebrid extends atoum {
     public function testLinkStreamAuto () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         $alldebrid->options['autoUnlockBestStreamQuality'] = true;
 
         $response = $alldebrid->linkUnlock('https://example.com/streaming');
@@ -195,7 +195,7 @@ class Alldebrid extends atoum {
     public function testLinkDelayed () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         [ $delayed, $error ] = $alldebrid->linkUnlock('https://example.com/delayed');
 
         $response = $alldebrid->linkDelayed($delayed['delayed']);
@@ -214,7 +214,7 @@ class Alldebrid extends atoum {
     public function testLinkWaitForDelayed () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         [ $delayed, $error ] = $alldebrid->linkUnlock('https://example.com/delayed');
 
         $response = $alldebrid->linkWaitForDelayed($delayed['delayed']);
@@ -234,7 +234,7 @@ class Alldebrid extends atoum {
     public function testUserLinks () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         $response = $alldebrid->userLinks();
 
         $this->array($response)
@@ -255,7 +255,7 @@ class Alldebrid extends atoum {
     public function testUserLinksSave () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         $response = $alldebrid->userLinksSave('https://example.com/testingLinksSave');
 
         $this->array($response)
@@ -272,7 +272,7 @@ class Alldebrid extends atoum {
     public function testUserLinksDelete () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         $response = $alldebrid->userLinksDelete('https://example.com/testingLinksSave');
 
         $this->array($response)
@@ -289,7 +289,7 @@ class Alldebrid extends atoum {
     public function testUserHistory () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         $response = $alldebrid->userHistory();
 
         $this->array($response)
@@ -310,7 +310,7 @@ class Alldebrid extends atoum {
     public function testUserHistoryDelete () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         $response = $alldebrid->userHistoryDelete();
 
         $this->array($response)
@@ -363,7 +363,7 @@ class Alldebrid extends atoum {
     public function testMagnetUpload () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         $response = $alldebrid->magnetUpload('magnet:?xt=urn:btih:286d2e5b4f8369855328336ac1263ae02a7a60d5');
 
         $this->array($response)
@@ -380,7 +380,7 @@ class Alldebrid extends atoum {
     public function testMagnetStatus () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
 
         [ $magnet, $error ] = $alldebrid->magnetUpload('magnet:?xt=urn:btih:286d2e5b4f8369855328336ac1263ae02a7a60d5');
 
@@ -400,7 +400,7 @@ class Alldebrid extends atoum {
     public function testMagnetDelete () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
 
         [ $magnet, $error ] = $alldebrid->magnetUpload('magnet:?xt=urn:btih:286d2e5b4f8369855328336ac1263ae02a7a60d5');
 
@@ -420,7 +420,7 @@ class Alldebrid extends atoum {
     public function testMagnetRestart () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
 
         $response = $alldebrid->magnetRestart(42);
 
@@ -438,7 +438,7 @@ class Alldebrid extends atoum {
     public function testMagnetInstant () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
 
         $response = $alldebrid->magnetInstant('magnet:?xt=urn:btih:286d2e5b4f8369855328336ac1263ae02a7a60d5');
 
@@ -457,7 +457,7 @@ class Alldebrid extends atoum {
     public function testError () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         $response = $alldebrid->error('GENERIC');
 
         $this->array($response)
@@ -471,7 +471,7 @@ class Alldebrid extends atoum {
     public function testException () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
         $alldebrid->setErrorMode('exception');
 
         $this->exception(
@@ -521,7 +521,7 @@ class Alldebrid extends atoum {
     public function testLink () {
         usleep(250000);
 
-        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'aplN8W0cZro1B54JrLs5');
+        $alldebrid = new \Alldebrid\Alldebrid('atoumTesting', 'PUT-A-VALID-APIKEY-HERE');
 
         $link = $alldebrid->link('https://example.com/streamDelayed');
 
